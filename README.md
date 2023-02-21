@@ -37,6 +37,12 @@ The entire solution is configured with [GitHub Actions](https://github.com/featu
 | AZURE_CREDENTIALS | The JSON credentials for an Azure subscription. Make sure the Service Principal has permissions at the subscription level scope [Learn more](https://docs.microsoft.com/azure/developer/github/connect-from-azure?tabs=azure-portal%2Cwindows#create-a-service-principal-and-add-it-as-a-github-secret) |
 | RESOURCE_GROUP | The name of the resource group to create|
 
+
+```text
+az ad sp create-for-rbac --name "acaMultiContainer" --role contributor \
+  --scopes /subscriptions/$subscriptionId \
+  --sdk-auth
+```
 3. Open GitHub Actions, select the **Build and Deploy** action and choose to run the workflow. If you would like to deploy the sample with API Management, you can update the `deployApim` parameter to `true` in the `.github/workflows/build-and-deploy.yaml`.
 
    The GitHub action performs the following actions:

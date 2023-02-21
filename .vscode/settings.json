@@ -6,5 +6,6 @@
             "front_matter_title": ""
         }
     },
-    "python.defaultInterpreterPath": "/usr/bin/python3"
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "go.goroot": "C:\Program Files\Go\bin"
 }
